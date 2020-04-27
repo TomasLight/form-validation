@@ -8,16 +8,10 @@ npm install model-state-validation
 
 Define your validator
 ```ts
-import { IValidator, ModelState, Errors } from "model-state-validation";
+import { IValidator, ModelState } from "model-state-validation";
 import { LoginModel } from "./LoginModel";
 
 export class LoginValidator implements IValidator<LoginModel> {
-
-    public static validate(model: LoginModel): Errors {
-        const validator = new LoginValidator();
-        return validator.validate(model).getErrors();
-    }
-
     public validate(model: LoginModel): ModelState {
         const modelState = new ModelState();
 
@@ -57,7 +51,8 @@ import { LoginModelValidator } from "./LoginModelValidator";
 
 export class Somewhere {
     public doSomething(myLoginModel: LoginModel) {
-        const modelState: ModelState = LoginModelValidator.validate(myLoginModel);
+        const validator = new LoginModelValidator();
+        const modelState: ModelState = validator.validate(myLoginModel);
 
         if (modelState.isInvalid()) {
             console.log(modelState.getErrors());
