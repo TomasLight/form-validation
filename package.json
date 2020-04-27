@@ -29,6 +29,6 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/TomasLight/final-form-set-errors-mutator.git"
+    "url": "https://github.com/TomasLight/model-state-validation.git"
   }
 }
