@@ -9,7 +9,7 @@ export class Errors {
 
     private containsField(fieldName: string): boolean {
         // @ts-ignore
-        return typeof this[fieldName] !== undefined;
+        return typeof this[fieldName] !== "undefined";
     }
 
     private addField(fieldName: string, value: string | object): void {
