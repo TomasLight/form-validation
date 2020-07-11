@@ -5,3 +5,4 @@ export * from "./IValidator";
 export * from "./IValidatorAsync";
 export * from "./ModelState";
 export * from "./ModelStateError";
+export * from "./typeGuards";
