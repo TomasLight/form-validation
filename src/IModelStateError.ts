@@ -1,4 +1,4 @@
 export interface IModelStateError {
-    name: string;
-    error: string | object;
+  name: string;
+  error: string | object;
 }

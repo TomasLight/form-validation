@@ -1,5 +1,5 @@
-import { ModelState } from "./ModelState";
+import { ModelState } from './ModelState';
 
 export interface IValidator<TModel> {
-    validate: (model: TModel) => ModelState;
+  validate: (model: TModel) => ModelState;
 }
